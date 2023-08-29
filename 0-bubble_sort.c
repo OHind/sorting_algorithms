@@ -23,15 +23,17 @@ void swipe_elements(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, index, tmp;
+	size_t index, tmp, l = size;
+	bool counter;
 
 	if (array == NULL || size < 2)
 	{
 		return;
 	}
-	for (i = 0; i < size; i++)
+	while (counter == false)
 	{
-		for (index = 0; index < size; index++)
+		counter = true;
+		for (index = 0; index < l - 1; index++)
 		{
 			if (array[index] > array[index + 1] && array[index + 1])
 			{
@@ -39,7 +41,9 @@ void bubble_sort(int *array, size_t size)
 				array[index] = array[index + 1];
 				array[index + 1] = tmp;
 				print_array(array, size);
+				counter = false;
 			}
 		}
+		l--;
 	}
 }
