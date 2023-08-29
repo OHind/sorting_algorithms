@@ -27,7 +27,7 @@ typedef enum bool
 {
 	false = 0,
 	true
-}bool;
+} bool;
 
 void bubble_sort(int *array, size_t size);
 void swipe_elements(int *a, int *b);
